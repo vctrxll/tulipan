@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="tuli.png" type="image/png">
+    <title>Creo que las canciones pueden decir más que las palabras</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            color: white;
+        }
+
+        header {
+            background-color: #111;
+            color: #d8c6ff; /* Violeta pastel */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #d8c6ff; /* Violeta pastel */
+        }
+
+        .home-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #444;
+        }
+
+        .music-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .music-card {
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .music-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .album-cover {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        .music-info {
+            padding: 15px;
+        }
+
+        .song-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .audio-player {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .footer-message {
+            background-color: #123456; /* Azul triste */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        .hidden-message {
+            color: #000000; /* Texto en negro sobre fondo negro - invisible */
+            background-color: #000000;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .hidden-message:hover {
+            color: #ffffff; /* Al pasar el mouse, el texto se vuelve blanco */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .music-container {
+                grid-template-columns: 1fr;
+            }
+
+            .home-button {
+                position: static;
+                transform: none;
+                display: block;
+                margin: 10px auto 0;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="home-button">Volver al Inicio</a>
+    <h1>Creo que las canciones pueden decir más que las palabras</h1>
+</header>
+
+<div class="music-container">
+    <!-- Canción 1 -->
+    <div class="music-card">
+        <img src="img/portadas/conmigosimpre.jpeg" alt="Portada Canción 1" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Conmigo Simpre</div>
+            <audio controls class="audio-player">
+                <source src="musica/Sabino%20-%20Conmigo%20Siempre.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 2 -->
+    <div class="music-card">
+        <img src="img/portadas/quetalsierestu.jpeg" alt="Portada Canción 2" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Que tal si eres tu</div>
+            <audio controls class="audio-player">
+                <source src="musica/Los%20Tigres%20Del%20Norte%20-%20Qué%20Tal%20Si%20Eres%20Tu.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 3 -->
+    <div class="music-card">
+        <img src="img/portadas/telefonia.jpeg" alt="Portada Canción 3" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Telefonia</div>
+            <audio controls class="audio-player">
+                <source src="musica/Jorge%20Drexler%20-%20Telefonia.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 4 -->
+    <div class="music-card">
+        <img src="img/portadas/cenizas%20en%20el%20mar.jpg" alt="Portada Canción 4" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Cenizas en el Mar</div>
+            <audio controls class="audio-player">
+                <source src="musica/Cenizas%20en%20El%20Mar.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 5 -->
+    <div class="music-card">
+        <img src="img/portadas/reina%20pepiada.jpeg" alt="Portada Canción 5" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Reina Pepiada</div>
+            <audio controls class="audio-player">
+                <source src="musica/Álvaro%20Díaz%20-%20Reina%20Pepiada.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 6 -->
+    <div class="music-card">
+        <img src="img/portadas/tuyo.jpg" alt="Portada Canción 6" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Tuyo</div>
+            <audio controls class="audio-player">
+                <source src="musica/Mora%20-%20TUYO.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 7 -->
+    <div class="music-card">
+        <img src="img/portadas/sin%20mirar%20las%20senales.jpg" alt="Portada Canción 7" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">SIN MIRAR LAS SENALES</div>
+            <audio controls class="audio-player">
+                <source src="musica/Rels%20B%20-%20SIN%20MIRAR%20LAS%20SEÑALES%20(Audio).mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 8 -->
+    <div class="music-card">
+        <img src="img/portadas/luna.jpg" alt="Portada Canción 8" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Luna</div>
+            <audio controls class="audio-player">
+                <source src="musica/ZOE-%20Luna%20(Unplugged).mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 9 (Nueva) -->
+    <div class="music-card">
+        <img src="img/portadas/sone.jpeg" alt="Portada Canción 9" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Soñé</div>
+            <audio controls class="audio-player">
+                <source src="musica/Soñé.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Canción 10 (Nueva) -->
+    <div class="music-card">
+        <img src="img/portadas/felicilandia.jpg" alt="Portada Canción 10" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Shh</div>
+            <audio controls class="audio-player">
+                <source src="musica/Alvaro%20Diaz,%20BRATTY%20-%20Shh%20(Audio).mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+    <div class="music-card">
+        <img src="img/portadas/felicilandia.jpg" alt="Portada Canción 10" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Online:(</div>
+            <audio controls class="audio-player">
+                <source src="musica/Alvaro%20Diaz,%20Sebastián%20Yatra%20-%20Online%20(%20(Audio).mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+    <div class="music-card">
+        <img src="img/portadas/parteme.jpeg" alt="Portada Canción 10" class="album-cover">
+        <div class="music-info">
+            <div class="song-title">Parteme la cara</div>
+            <audio controls class="audio-player">
+                <source src="musica/C.%20Tangana,%20Ed%20Maverick%20-%20Párteme%20La%20Cara.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+</div>
+
+<div class="footer-message">
+    Prometo no romper el contacto cero, quiero q volvamos a ser
+</div>
+
+<div class="hidden-message">
+    hoy 04/05/2025 comi burritos, y recorde el dia que te lleve burritos y baguets y acompanarte a que te nebulizaras, fue la primera vez que preparaba esa comida y queria tu opinion, me dio nostalgia la verdad, textranoMucho
+</div>
+<div class="hidden-message">
+    Quiero mi mejor version para ti, para nosostros
+</div>
+<div class="hidden-message">
+    https://vt.tiktok.com/ZShjbt3EM/
+</div>
+<div class="hidden-message">
+    A veces el amor necesita romperse para reconstruirse mas fuerte, para volver a intenrtalo, no por lo que fuimos, sino pot lo que podemos ser: mas sanos, mas sabios y mas nuestros
+</div>
+
+<div class="hidden-message">
+    Solo estamos en pausa, pronto volveremos a estar juntos y retomar verdad que shi?
+</div>
+<div class="hidden-message">
+    Solo una vez mas por favor:c
+</div>
+<div class="hidden-message">
+    simpre gritaba con tus mordidas por que me dolian, ahora me duele mas no senitrlas
+</div>
+<div class="hidden-message">
+    Quiza ya no hablemos como antes, quiza no volvemos a tener la misma confianza, ya no hacemos bromas, ni mucho menos nos contamos como fue nuestro dia, pero eres la personas que estuvo a mi ladom que ne hizo reir, ser feliz y que me daba paz y te doy gracias por eso
+</div>
+<script>
+    // Script para hacer visible el mensaje oculto al hacer clic
+    document.querySelector('.hidden-message').addEventListener('click', function() {
+        this.style.color = "#ffffff";
+        setTimeout(() => {
+            this.style.color = "#000000";
+        }, 5000); // Vuelve a ocultar después de 5 segundos
+    });
+</script>
+</body>
+</html>

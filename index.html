@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te extraño Susy</title>
+    <link rel="icon" href="tuli.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Jardín de Recuerdos</h1>
+    <div id="dateInfo" class="date-counter"></div>
+    <div class="garden-container">
+        <svg id="garden" viewBox="0 0 800 500"></svg>
+        <div id="dayNightIndicator" class="day-night-indicator"></div>
+    </div>
+    <div id="tulipInfo" class="tulip-counter"></div>
+    <div class="message">
+        <p>Cada tulipán representa lo que tanto que te extraño. Con cada día que pasa, una nueva flor nace en este jardín digital, simbolizando cómo los recuerdos y sentimientos crecen con el tiempo, formando un hermoso panorama de nostalgia.</p>
+    </div>
+    <div>
+        <a href="/mensajes.html" class="message-button">Te quiero decir algo</a>
+    </div>
+
+    <!-- Foto Destacada -->
+    <div class="featured-photo-container">
+        <div class="featured-photo-frame" id="featuredPhoto">
+            <img class="photo" src="img/gigante.jpg" alt="Nuestro momento especial">
+            <img class="frame" src="img/marco.png" alt="Marco dorado grande">
+        </div>
+    </div>
+    <div>
+        <a href="https://regalo-6lj.pages.dev/" class="message-button">14/02/2025</a>
+    </div>
+    <div>
+        <a href="https://susy-ami.pages.dev/" class="message-button">infinito como lo que siento</a>
+    </div>
+
+    <div class="photo-gallery" id="photoGallery">
+        <!-- Las fotos se cargarán dinámicamente mediante JavaScript -->
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Jardín de Tulipanes Creciente</p>
+</div>
+
+<!-- Modal para ver imágenes en grande -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <img id="modalImage" src="" alt="Imagen en grande">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
