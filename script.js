@@ -212,7 +212,7 @@ function loadPhotoGallery() {
     const photoGallery = document.getElementById("photoGallery");
 
     // Total de fotos a mostrar (aumentado a 36)
-    const totalPhotos = 36;
+    const totalPhotos = 78;
 
     // Limpiar galería existente
     photoGallery.innerHTML = '';
